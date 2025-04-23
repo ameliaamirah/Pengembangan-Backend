@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Barang</title>
+</head>
+<body>
+  <h1>Daftar Barang</h1>
+  <div id="daftar-barang">Memuat data...</div>
+
+  <script>
+    fetch("http://localhost:6969/barang")
+      .then((res) => {
+        if (!res.ok) throw new Error("Gagal mengambil data barang");
+        return res.json();
+      })
+      .then((data) => {
+        const container = document.getElementById("daftar-barang");
+        container.innerHTML = ""; // Bersihkan isi awal
+        data.forEach((b) => {
+          const div = document.createElement("div");
+          div.innerHTML = `
+            <p><strong>${b.nama}</strong></p>
+            <p>Harga: Rp${b.harga.toLocaleString()}</p>
+            <p>Stok: ${b.stok}</p>
+            <hr />
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+        const container = document.getElementById("daftar-barang");
+        container.innerHTML = "<p>Gagal memuat data barang.</p>";
+      });
+  </script>
+</body>
+</html>

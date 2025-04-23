@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nama": "Laptop Asus",
+    "harga": 12000000,
+    "stok": 10
+  },
+  {
+    "id": 2,
+    "nama": "Mouse Logitech",
+    "harga": 250000,
+    "stok": 15
+  },
+  {
+    "id": 3,
+    "nama": "Keyboard Mechanical",
+    "harga": 750000,
+    "stok": 25
+  },
+  {
+    "id": 4,
+    "nama": "Mouse Wireless",
+    "harga": 200000,
+    "stok": 30
+  },
+  {
+    "id": 5,
+    "nama": "Monitor 24 inch",
+    "harga": 200000,
+    "stok": 15
+  }
+]  
