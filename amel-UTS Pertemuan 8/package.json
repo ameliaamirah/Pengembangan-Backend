@@ -1,0 +1,16 @@
+{
+  "name": "amel-uts-pertemuan-8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amel",
+  "license": "ISC",
+  "description": "API CRUD untuk tabel supplier di database toko",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  }
+}
